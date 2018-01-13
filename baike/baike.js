@@ -11,7 +11,7 @@ let log = function (text) {
 }
 
 let clog = function() {
-  console.log.call(null, '\n[baike]:', ...arguments)
+  console.log.call(null, '[baike]:', ...arguments)
 }
 
 if (!process.argv[2]) {
@@ -28,12 +28,11 @@ log('loading')
 
 axios.get(url)
   .then((data) => {
-    clog('get: ' + url)
     let reg = /name=\"description\" content=\".*\">/
     if (reg.test(data.data)) {
-      clog(reg.exec(data.data)[0].slice(28, -2))
-      log('done')
+      log(' get-> ' + url)
       spinner.succeed()
+      clog(reg.exec(data.data)[0].slice(28, -2))
     } else {
       log('no result')
       spinner.fail()
