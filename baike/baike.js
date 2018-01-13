@@ -30,9 +30,14 @@ axios.get(url)
   .then((data) => {
     clog('get: ' + url)
     let reg = /name=\"description\" content=\".*\">/
-    clog(reg.exec(data.data)[0].slice(28, -2))
-    log('done')
-    spinner.succeed()
+    if (reg.test(data.data)) {
+      clog(reg.exec(data.data)[0].slice(28, -2))
+      log('done')
+      spinner.succeed()
+    } else {
+      log('no result')
+      spinner.fail()
+    }
   })
   .catch((error) => {
     log(error)
