@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bookmarker</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./css/index.css" type="text/css" media="all" />
+</head>
+<body onload="renderBookmarks()">
+<div class="jumbotron">
+  <h3>Bookmarker</h3>
+  <form id="bookmark">
+    <input id="bookname" type="text" class="form-control" placeholder="bookname" aria-describedby="basic-addon1">
+    <input id="bookurl" type="text" class="form-control" placeholder="bookurl" aria-describedby="basic-addon1">
+    <button id="submit" class="btn btn-primary btn-lg" role="button">Learn more</button>
+  </form>
+  <div id="bookmarklist"></div>
+</div>
+</body>
+<script src="./js/main.js"></script>
+</html>

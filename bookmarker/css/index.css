@@ -1,0 +1,17 @@
+.jumbotron {
+  padding: 50px 300px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.well {
+  margin-top: 10px;
+}
+
+.well .btn {
+  float: right;
+  position: relative;
+  top: -30px;
+}
