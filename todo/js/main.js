@@ -6,12 +6,12 @@ document.getElementById('add').addEventListener('click', function(e) {
   var text = document.getElementById('text').value
   if (text) {
     // 不存在顺序问题 使用的方法和添加的事件会加入已经显示的dom
-    var li = document.createElement('li')
-    var span = document.createElement('span')
-    var del = document.createElement('button')
-    var complete = document.createElement('button')
-    var ul = document.getElementById('todo')
-    
+    var li = document.createElement('li'),
+      span = document.createElement('span'),
+      del = document.createElement('button'),
+      complete = document.createElement('button'),
+      ul = document.getElementById('todo')
+
     li.appendChild(span)
     li.appendChild(complete)
     li.appendChild(del)
@@ -25,11 +25,12 @@ document.getElementById('add').addEventListener('click', function(e) {
 
     // 添加事件  (存在性能问题，应使用事件冒泡，可只添加一个事件)
     complete.addEventListener('click', function() {
-      var parent = this.parentNode
-      var parparent = parent.parentNode
-      var target = parparent.id.toLowerCase() === 'todo' 
+      var parent = this.parentNode,
+        parparent = parent.parentNode,
+        target = parparent.id.toLowerCase() === 'todo' 
         ? document.getElementById('complete') 
         : document.getElementById('todo')
+
       parparent.removeChild(parent)
       target.insertBefore(parent, target.firstChild)
     })
