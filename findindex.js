@@ -2,6 +2,7 @@
  * find index in array
  * start 2018-04-28 17:22
  * end 2018-04-28 17:55
+ * @bug
  */
 
 'use strict'
