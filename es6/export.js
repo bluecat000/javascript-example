@@ -11,16 +11,16 @@
 // }
 
 let b = 1
-// let b = window.global
+// let b = window.global 不会改变
 function fn () {
-  console.log(fn)
+  console.log('fn')
 }
 export {b, fn}
 export default 10
 
-// 不会改变
-// setTimeout(() => {
-  // b = 1
-// }, 1000)
+// 会改变
+setTimeout(() => {
+  window.global = 0
+}, 1000)
 //输出a
 // export {b as a, fn}
