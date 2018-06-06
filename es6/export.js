@@ -10,8 +10,15 @@
   // console.log('default')
 // }
 
-let b = 2
+let b = window.global
 function fn () {
   console.log(fn)
 }
 export {b, fn}
+
+// 不会改变
+// setTimeout(() => {
+  // b = 1
+// }, 1000)
+//输出a
+// export {b as a, fn}
