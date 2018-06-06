@@ -1,4 +1,4 @@
-let {a,b,m: admin} = {
+let {a,b,c: admin,d,f} = {
   a() {
     console.log(1)
   },
@@ -7,11 +7,12 @@ let {a,b,m: admin} = {
   },
   c() {
     console.log(3)
-  }
+  },
+  d: 1,
 }
 
 var obj = {
-  a,b,admin
+  a,b,admin,d,f
 }
 
 console.log(obj)
