@@ -10,5 +10,9 @@ let {a,b,m: admin} = {
   }
 }
 
-admin()
+var obj = {
+  a,b,admin
+}
+
+console.log(obj)
 
