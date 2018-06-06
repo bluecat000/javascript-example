@@ -10,11 +10,13 @@
   // console.log('default')
 // }
 
-let b = window.global
+let b = 1
+// let b = window.global
 function fn () {
   console.log(fn)
 }
 export {b, fn}
+export default 10
 
 // 不会改变
 // setTimeout(() => {
